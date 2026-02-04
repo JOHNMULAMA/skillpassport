@@ -1,10 +1,5 @@
-Love where you’re taking this — this is turning into a serious commercial-grade Moodle product. I’ll give you a fully polished, marketplace-ready README you can drop directly into GitHub, Moodle Plugins directory, or even pitch to clients/investors.
 
-Below is a final professional README (enterprise + sales quality).
-
-⸻
-
-🚀 Skill Passport – Blockchain Verified Credentials for Moodle
+Skill Passport – Blockchain Verified Credentials for Moodle
 
 🌍 Overview
 
@@ -18,308 +13,270 @@ By combining blockchain verification, NFT-ready recognition, and AI integration 
 
 ✨ Key Value Proposition
 
-✔ Eliminate credential fraud
-✔ Provide globally verifiable achievements
-✔ Enhance learner employability
-✔ Support gamified education models
-✔ Future-proof learning records
+*   ✔ Eliminate credential fraud
+*   ✔ Provide globally verifiable achievements
+*   ✔ Enhance learner employability
+*   ✔ Support gamified education models
+*   ✔ Future-proof learning records
 
 ⸻
 
 🎯 Core Features
 
-🔗 Blockchain-Verified Credentials
+### 🔗 Blockchain-Verified Credentials
 
 Skill Passport securely issues credentials backed by blockchain verification for:
-	•	Course completion
-	•	Activity completion
-	•	Badge achievements
+*   Course completion
+*   Activity completion
+*   Badge achievements
 
 Each credential stores a blockchain transaction hash enabling third-party verification.
 
-⸻
-
-📜 Immutable Achievement Records
+### 📜 Immutable Achievement Records
 
 Once issued, credentials cannot be altered, ensuring:
-	•	Academic integrity
-	•	Trustworthy certification
-	•	Transparent verification processes
+*   Academic integrity
+*   Trustworthy certification
+*   Transparent verification processes
 
-⸻
-
-🎓 Learner Skill Passport Dashboard
+### 🎓 Learner Skill Passport Dashboard
 
 Each learner receives a personal dashboard displaying:
-	•	Completed credentials
-	•	Blockchain verification links
-	•	Achievement history timeline
-	•	NFT badge records (optional)
+*   Completed credentials
+*   Blockchain verification links
+*   Achievement history timeline
+*   NFT badge records (optional)
 
-⸻
-
-🪙 NFT-Ready Digital Badges
+### 🪙 NFT-Ready Digital Badges
 
 Institutions can mint NFT-style badges tied to credentials for:
-	•	Gamified engagement
-	•	Digital ownership of achievements
-	•	Blockchain collectible certificates
+*   Gamified engagement
+*   Digital ownership of achievements
+*   Blockchain collectible certificates
 
-⸻
-
-🤖 AI Integration Ready
+### 🤖 AI Integration Ready
 
 Skill Passport includes extensible hooks enabling:
-	•	Personalized learning recommendations
-	•	Skill gap analysis
-	•	Career pathway suggestions
-	•	Automated academic advising
+*   Personalized learning recommendations
+*   Skill gap analysis
+*   Career pathway suggestions
+*   Automated academic advising
 
-⸻
-
-⚙️ Advanced Admin Configuration
+### ⚙️ Advanced Admin Configuration
 
 Administrators can configure:
-	•	Blockchain network selection
-	•	Node endpoint URLs
-	•	NFT metadata templates
-	•	Dashboard display preferences
-	•	AI integration toggles
+*   Blockchain network selection
+*   Node endpoint URLs
+*   NFT metadata templates
+*   Dashboard display preferences
+*   AI integration toggles
 
-⸻
-
-🔐 Moodle Security Compliance
+### 🔐 Moodle Security Compliance
 
 Skill Passport follows Moodle best practices:
-	•	Role-based capability enforcement
-	•	Secure input sanitization
-	•	CSRF protection
-	•	Moodle database API compliance
+*   Role-based capability enforcement
+*   Secure input sanitization
+*   CSRF protection
+*   Moodle database API compliance
 
 ⸻
 
 🏗 Architecture Overview
 
-Moodle LMS
-   │
-   ├── Skill Passport Plugin
-   │      ├── Credential Issuance Engine
-   │      ├── Blockchain Hash Storage
-   │      ├── NFT Metadata Generator
-   │      ├── Learner Dashboard UI
-   │      └── AI Recommendation Hooks
-   │
-   └── External Blockchain Network
+```
 
+Moodle LMS
+│
+├── Skill Passport Plugin
+│      ├── Credential Issuance Engine
+│      ├── Blockchain Hash Storage
+│      ├── NFT Metadata Generator
+│      ├── Learner Dashboard UI
+│      └── AI Recommendation Hooks
+│
+└── External Blockchain Network
+
+```
 
 ⸻
 
 📦 Installation
 
-Requirements
-	•	Moodle 4.3+
-	•	PHP 8.0+
-	•	MySQL / PostgreSQL supported
-	•	Blockchain testnet access (optional demo)
+### Requirements
+*   Moodle 4.3+
+*   PHP 8.0+
+*   MySQL / PostgreSQL supported
+*   Blockchain testnet access (optional demo)
 
-⸻
+### Installation Steps
 
-Installation Steps
+#### 1️⃣ Download Plugin
 
-1️⃣ Download Plugin
+Download or clone from:
+`https://github.com/JOHNMULAMA/skillpassport`
 
-Download or clone:
+#### 2️⃣ Install Plugin
 
-https://github.com/JOHNMULAMA/skillpassport
-
-
-⸻
-
-2️⃣ Install Plugin
-
-Extract into Moodle:
-
-moodle/local/skillpassport
+Extract into Moodle directory:
+`moodle/local/skillpassport`
 
 Ensure folder structure:
+`moodle/local/skillpassport/version.php`
 
-moodle/local/skillpassport/version.php
-
-
-⸻
-
-3️⃣ Run Moodle Upgrade
+#### 3️⃣ Run Moodle Upgrade
 
 Navigate to:
-
-Site Administration → Notifications
-
+**Site Administration → Notifications**
 Follow installation prompts.
 
-⸻
-
-4️⃣ Configure Plugin
+#### 4️⃣ Configure Plugin
 
 Navigate to:
-
-Site Administration → Plugins → Local Plugins → Skill Passport
-
+**Site Administration → Plugins → Local Plugins → Skill Passport**
 
 ⸻
 
 ⚙️ Configuration Guide
 
-🔗 Blockchain Settings
+### 🔗 Blockchain Settings
 
-Setting	Description
-Blockchain Network	Select Ethereum / Polygon / Testnet
-Node URL	RPC endpoint
-Verification Explorer	Blockchain verification URL
+| Setting | Description |
+|---------|-------------|
+| Blockchain Network | Select Ethereum / Polygon / Testnet |
+| Node URL | RPC endpoint |
+| Verification Explorer | Blockchain verification URL |
 
+### 🪙 NFT Settings
+
+Configure:
+*   Metadata templates
+*   Token naming patterns
+*   Contract placeholders
+
+### 🤖 AI Integration
+
+Enable AI triggers for:
+*   Learning recommendations
+*   Credential analytics
+*   Skill development insights
 
 ⸻
 
-🪙 NFT Settings
-
-Configure:
-	•	Metadata templates
-	•	Token naming patterns
-	•	Contract placeholders
-
-
-
-🤖 AI Integration
-
-Enable AI triggers for:
-	•	Learning recommendations
-	•	Credential analytics
-	•	Skill development insights
-
-
-
 👩‍🏫 Usage
 
-For Administrators
-	•	Configure blockchain credentials
-	•	Manage NFT templates
-	•	Control verification settings
+### For Administrators
+*   Configure blockchain credentials
+*   Manage NFT templates
+*   Control verification settings
 
-
-
-For Teachers
+### For Teachers
 
 Credentials can be issued automatically when:
-	•	Course completion occurs
-	•	Activity completion is detected
-	•	Badge awards are granted
+*   Course completion occurs
+*   Activity completion is detected
+*   Badge awards are granted
 
-
-
-For Learners
+### For Learners
 
 Students access their Skill Passport via navigation menu:
-
-Dashboard → Skill Passport
+**Dashboard → Skill Passport**
 
 They can:
-	•	View achievements
-	•	Verify credentials
-	•	Share blockchain proof
-	•	View NFT badges
+*   View achievements
+*   Verify credentials
+*   Share blockchain proof
+*   View NFT badges
 
-
-
-🔎 Credential Verification
+### 🔎 Credential Verification
 
 Each credential includes a blockchain transaction hash allowing public verification through blockchain explorers.
 
-
+⸻
 
 🧩 Database Tables
 
-Table	Purpose
-local_skillpassport_credentials	Stores issued credentials
-local_skillpassport_nft	Stores NFT metadata
+| Table | Purpose |
+|-------|---------|
+| `local_skillpassport_credentials` | Stores issued credentials |
+| `local_skillpassport_nft` | Stores NFT metadata |
 
-
-
+⸻
 
 🔌 Extensibility
 
 Developers can integrate with:
-	•	External blockchain providers
-	•	AI learning systems
-	•	Employer verification portals
-	•	Digital portfolio platforms
+*   External blockchain providers
+*   AI learning systems
+*   Employer verification portals
+*   Digital portfolio platforms
 
-
+⸻
 
 🔒 Privacy & Compliance
 
 Skill Passport respects:
-	•	Moodle privacy APIs
-	•	GDPR considerations
-	•	Secure credential storage practices
+*   Moodle privacy APIs
+*   GDPR considerations
+*   Secure credential storage practices
 
-
+⸻
 
 🛣 Roadmap
 
-Planned Features
-	•	Smart contract credential minting
-	•	Employer verification API
-	•	Mobile wallet credential export
-	•	Multi-chain credential storage
-	•	Open Badges 3.0 compatibility
-	•	AI skill forecasting dashboard
+**Planned Features**
+*   Smart contract credential minting
+*   Employer verification API
+*   Mobile wallet credential export
+*   Multi-chain credential storage
+*   Open Badges 3.0 compatibility
+*   AI skill forecasting dashboard
 
-
+⸻
 
 🤝 Contributing
 
 Contributions are welcome.
 
-Steps
-	1.	Fork repository
-	2.	Create feature branch
-	3.	Submit pull request
+**Steps**
+1.  Fork repository
+2.  Create feature branch
+3.  Submit pull request
 
-
+⸻
 
 📜 License
 
-Licensed under:
+Licensed under: **GNU GPL v3**
 
-GNU GPL v3
-
-
-
+⸻
 
 👨‍💻 Author
 
-John Mulama
+**John Mulama**  
 Senior Software Engineer
 
-📧 johnmulama001@gmail.com
-🌍 Blockchain | AI | EdTech Solutions
+*   📧 johnmulama001@gmail.com
+*   🌍 Blockchain | AI | EdTech Solutions
 
+⸻
 
-
-⭐ Why Skill Passport Matters
+ Why Skill Passport Matters
 
 Digital credentials are replacing traditional certification. Skill Passport ensures institutions remain:
-	•	Globally competitive
-	•	Fraud-resistant
-	•	Industry aligned
-	•	Future-ready
+*   Globally competitive
+*   Fraud-resistant
+*   Industry aligned
+*   Future-ready
 
+⸻
 
-
-🚀 Enterprise & Partnership Opportunities
+Enterprise & Partnership Opportunities
 
 Skill Passport is suitable for:
-	•	Universities
-	•	Professional training institutions
-	•	Government certification bodies
-	•	Corporate learning platforms
+*   Universities
+*   Professional training institutions
+*   Government certification bodies
+*   Corporate learning platforms
 
+**If you are interested in integration, customization, or enterprise deployment, feel free to reach out.**
+```
