@@ -1,5 +1,5 @@
 
-Skill Passport – Blockchain Verified Credentials for Moodle
+#Skill Passport – Blockchain Verified Credentials for Moodle
 
 🌍 Overview
 
@@ -9,7 +9,6 @@ It enables institutions to issue tamper-proof digital credentials for course com
 
 By combining blockchain verification, NFT-ready recognition, and AI integration hooks, Skill Passport prepares educational institutions for the next generation of digital credentialing and lifelong learning ecosystems.
 
-⸻
 
 ✨ Key Value Proposition
 
@@ -19,7 +18,7 @@ By combining blockchain verification, NFT-ready recognition, and AI integration 
 *   ✔ Support gamified education models
 *   ✔ Future-proof learning records
 
-⸻
+
 
 🎯 Core Features
 
@@ -79,8 +78,6 @@ Skill Passport follows Moodle best practices:
 *   CSRF protection
 *   Moodle database API compliance
 
-⸻
-
 🏗 Architecture Overview
 
 ```
@@ -98,7 +95,6 @@ Moodle LMS
 
 ```
 
-⸻
 
 📦 Installation
 
@@ -134,7 +130,6 @@ Follow installation prompts.
 Navigate to:
 **Site Administration → Plugins → Local Plugins → Skill Passport**
 
-⸻
 
 ⚙️ Configuration Guide
 
@@ -160,7 +155,6 @@ Enable AI triggers for:
 *   Credential analytics
 *   Skill development insights
 
-⸻
 
 👩‍🏫 Usage
 
@@ -191,7 +185,6 @@ They can:
 
 Each credential includes a blockchain transaction hash allowing public verification through blockchain explorers.
 
-⸻
 
 🧩 Database Tables
 
@@ -200,7 +193,6 @@ Each credential includes a blockchain transaction hash allowing public verificat
 | `local_skillpassport_credentials` | Stores issued credentials |
 | `local_skillpassport_nft` | Stores NFT metadata |
 
-⸻
 
 🔌 Extensibility
 
@@ -210,7 +202,6 @@ Developers can integrate with:
 *   Employer verification portals
 *   Digital portfolio platforms
 
-⸻
 
 🔒 Privacy & Compliance
 
@@ -219,7 +210,6 @@ Skill Passport respects:
 *   GDPR considerations
 *   Secure credential storage practices
 
-⸻
 
 🛣 Roadmap
 
@@ -231,7 +221,6 @@ Skill Passport respects:
 *   Open Badges 3.0 compatibility
 *   AI skill forecasting dashboard
 
-⸻
 
 🤝 Contributing
 
@@ -242,13 +231,11 @@ Contributions are welcome.
 2.  Create feature branch
 3.  Submit pull request
 
-⸻
 
 📜 License
 
 Licensed under: **GNU GPL v3**
 
-⸻
 
 👨‍💻 Author
 
@@ -258,7 +245,6 @@ Senior Software Engineer
 *   📧 johnmulama001@gmail.com
 *   🌍 Blockchain | AI | EdTech Solutions
 
-⸻
 
  Why Skill Passport Matters
 
@@ -268,7 +254,6 @@ Digital credentials are replacing traditional certification. Skill Passport ensu
 *   Industry aligned
 *   Future-ready
 
-⸻
 
 Enterprise & Partnership Opportunities
 
