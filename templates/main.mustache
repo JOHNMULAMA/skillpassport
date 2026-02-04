@@ -1,0 +1,41 @@
+{{!
+    This template renders the main Skill Passport dashboard.
+
+    @package    local_skillpassport
+    @copyright  2024 John Mulama <johnmulama001@gmail.com>
+    @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+    @author     John Mulama - Senior Software Engineer (johnmulama001@gmail.com)
+}}
+
+<div class="local_skillpassport_dashboard">
+    <div class="skillpassport-header d-flex justify-content-between align-items-center mb-4">
+        <h2>{{#str}}pluginname, local_skillpassport{{/str}} {{#username}}{{username}}{{/username}}</h2>
+        {{#can_issue}}
+            <a href="{{issuenewcredentialurl}}" class="btn btn-primary">
+                {{#str}}issuecredential, local_skillpassport{{/str}}
+            </a>
+        {{/can_issue}}
+    </div>
+
+    {{#has_credentials}}
+        <div class="list-group skillpassport-credentials-list">
+            {{#credentials}}
+                {{> local_skillpassport/credential_entry}}
+            {{/credentials}}
+        </div>
+    {{/has_credentials}}
+    {{^has_credentials}}
+        <div class="alert alert-info">
+            {{#str}}nocredentialsfound, local_skillpassport{{/str}}
+        </div>
+    {{/has_credentials}}
+</div>
+
+<script type="text/javascript">
+    require(['jquery'], function($) {
+        // Basic client-side interactivity (e.g., toggle details, if any)
+        $('.skillpassport-credential-item').on('click', function() {
+            $(this).find('.credential-details').slideToggle();
+        });
+    });
+</script>

@@ -1,0 +1,98 @@
+/**
+ * CSS styles for the SkillPassport local plugin.
+ *
+ * @package    local_skillpassport
+ * @copyright  2024 John Mulama <johnmulama001@gmail.com>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @author     John Mulama - Senior Software Engineer (johnmulama001@gmail.com)
+ */
+
+.local_skillpassport_dashboard {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.05);
+}
+
+.skillpassport-header h2 {
+    color: #343a40;
+    font-weight: 600;
+}
+
+.skillpassport-credentials-list .list-group-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.skillpassport-credentials-list .list-group-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,.1);
+}
+
+.list-group-item h5 {
+    color: #0056b3; /* Moodle blue */
+    font-weight: 500;
+}
+
+.list-group-item p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+.list-group-item small {
+    color: #888;
+}
+
+.list-group-item .btn {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.credential-details {
+    border-top: 1px dashed #e0e0e0;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.credential-details h6 {
+    color: #495057;
+    font-weight: 600;
+}
+
+.credential-details pre {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 0.85em;
+}
+
+/* Admin settings specific styles */
+.admin_settingpage .admin_setting_heading {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skillpassport-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .skillpassport-header .btn-primary {
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
+    }
+    .list-group-item .btn {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}

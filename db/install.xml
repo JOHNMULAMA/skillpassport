@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/skillpassport/db" VERSION="2024111500" COMMENT="XMLDB file for Moodle local_skillpassport plugin" PEDANTIC="true">
+
+  <TABLES>
+
+    <!-- Credentials table -->
+    <TABLE NAME="local_skillpassport_credentials" COMMENT="Stores blockchain-verified credentials">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" AUTOINCREMENT="true" COMMENT="Primary key"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" COMMENT="Moodle user ID"/>
+        <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" COMMENT="Moodle course ID (if credential is course-related)"/>
+        <FIELD NAME="cmid" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" COMMENT="Moodle course module ID (if credential is activity-related)"/>
+        <FIELD NAME="badgeid" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" COMMENT="Moodle badge ID (if credential is badge-related)"/>
+        <FIELD NAME="credential_type" TYPE="char" LENGTH="50" NOTNULL="true" COMMENT="Type of credential (course, activity, badge)"/>
+        <FIELD NAME="timestamp" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" COMMENT="Timestamp when the credential was issued"/>
+        <FIELD NAME="blockchain_txhash" TYPE="char" LENGTH="255" NOTNULL="false" COMMENT="Blockchain transaction hash for verification"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" COMMENT="Record creation timestamp"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" COMMENT="Record last modified timestamp"/>
+      </FIELDS>
+
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="userid_fk" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id"/>
+      </KEYS>
+
+      <INDEXES>
+        <INDEX NAME="userid_idx" UNIQUE="false" FIELDS="userid"/>
+        <INDEX NAME="credential_type_idx" UNIQUE="false" FIELDS="credential_type"/>
+      </INDEXES>
+    </TABLE>
+
+    <!-- NFT metadata table -->
+    <TABLE NAME="local_skillpassport_nft" COMMENT="Stores NFT-style badge metadata">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" AUTOINCREMENT="true" COMMENT="Primary key"/>
+        <FIELD NAME="credentialid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" COMMENT="Foreign key to local_skillpassport_credentials"/>
+        <FIELD NAME="nft_metadata" TYPE="text" NOTNULL="true" COMMENT="JSON string of NFT metadata"/>
+        <FIELD NAME="tokenid" TYPE="char" LENGTH="255" NOTNULL="false" COMMENT="The blockchain token ID for the NFT"/>
+        <FIELD NAME="contractaddress" TYPE="char" LENGTH="255" NOTNULL="false" COMMENT="The blockchain contract address for the NFT"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" COMMENT="Record creation timestamp"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" COMMENT="Record last modified timestamp"/>
+      </FIELDS>
+
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="credentialid_fk" TYPE="foreign" FIELDS="credentialid" REFTABLE="local_skillpassport_credentials" REFFIELDS="id"/>
+      </KEYS>
+
+      <INDEXES>
+        <INDEX NAME="credentialid_idx" UNIQUE="false" FIELDS="credentialid"/>
+      </INDEXES>
+    </TABLE>
+
+  </TABLES>
+</XMLDB>
